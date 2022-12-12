@@ -139,6 +139,16 @@
       <Project>{2e05089d-8f1b-4f1f-9b82-e37b1e84c4f2}</Project>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Boids.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Resources\shaders\boid_frag.glsl" />
+    <None Include="..\Resources\shaders\boid_vertex.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\Resources\sprites\boid.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

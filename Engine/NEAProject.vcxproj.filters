@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\Vivium\Animation.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Application.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Body.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Button.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Camera.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Font.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Framebuffer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\IndexBuffer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Input.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Logger.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Math.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Noise.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Panel.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Physics.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Quad.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Rect.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Renderer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Serialiser.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Shader.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Slider.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Sprite.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Text.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\TextInput.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Texture.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\TextureAtlas.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Timer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Utils.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Vector2.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\VersionNumber.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\VertexBuffer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Color.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Random.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Core.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Scene.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Batch.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Stream.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\ParticleSystem.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Pathfinding.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\Events.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Vivium\WeightMap.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Vivium.h" />
+    <ClInclude Include="src\Vivium\Animation.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Application.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Body.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Button.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Camera.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Core.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Font.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Framebuffer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\IndexBuffer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Input.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Logger.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Math.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Noise.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Panel.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Physics.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Quad.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Rect.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Renderer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Serialiser.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Shader.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Slider.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Sprite.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Text.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\TextInput.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Texture.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\TextureAtlas.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Timer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Utils.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Vector2.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\VersionNumber.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\VertexBuffer.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Color.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Random.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Scene.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Batch.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Streamable.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Stream.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\ParticleSystem.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Pathfinding.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\Events.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Vivium\WeightMap.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Headers">
+      <UniqueIdentifier>{1f2e164b-e22f-4852-bf06-9f499ea7ac17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{f2713ec7-ace5-4c0a-b3e4-de46704199fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{bc1d066e-beb9-4581-b5a4-d43716b5fd69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

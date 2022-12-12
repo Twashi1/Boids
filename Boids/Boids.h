@@ -6,6 +6,7 @@
 struct Boid {
 	static constexpr float size = 32.0f;
 	static constexpr float speed = 128.0f;
+	static constexpr float range = 300.0f;
 
 	Vivium::Vector2<float> center;
 	float angle;

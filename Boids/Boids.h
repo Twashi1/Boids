@@ -4,30 +4,44 @@
 #include "../Engine/src/Vivium.h"
 
 struct Boid {
+	static uint16_t identifier_counter;
+
 	static constexpr float size = 32.0f;
 	static constexpr float speed = 128.0f;
 	static constexpr float range = 300.0f;
 
+	uint16_t identifier;
 	Vivium::Vector2<float> center;
+	Vivium::Vector2<float> vel;
 	float angle;
-	float cos_angle;
-	float sin_angle;
 
-	inline void UpdateAngle(float n) {
-		angle = n;
-		cos_angle = cos(n);
-		sin_angle = sin(n);
+	inline void UpdateAngle() {
+		angle = std::atan2(vel.y, vel.x);
+	}
+
+	inline void UpdateVel() {
+		float cos_angle = cos(angle);
+		float sin_angle = sin(angle);
+
+		vel.x = cos_angle * speed;
+		vel.y = sin_angle * speed;
+	}
+
+	bool operator==(const Boid& other) {
+		return identifier == other.identifier;
+	}
+
+	bool operator!=(const Boid& other) {
+		return identifier != other.identifier;
 	}
 
 	Boid(Vivium::Vector2<float> center, float angle)
-		: center(center), angle(angle) {
-		cos_angle = cos(angle);
-		sin_angle = sin(angle);
+		: center(center), angle(angle), identifier(identifier_counter++) {
+		UpdateVel();
 	}
 
-	void UpdateVelocity(float elapsed) {
-		center.x += cos_angle * speed * elapsed;
-		center.y += sin_angle * speed * elapsed;
+	void UpdatePosition(float elapsed) {
+		center += vel * elapsed;
 	}
 
 	void WrapPosition(Vivium::Vector2<float> screen_dim) {
@@ -49,6 +63,8 @@ struct Boid {
 		}
 	}
 };
+
+uint16_t Boid::identifier_counter = 0;
 
 class World {
 public:
@@ -86,7 +102,14 @@ public:
 		auto screen_dim = Vivium::Application::GetScreenDim();
 
 		for (Boid& boid : boids) {
-			boid.UpdateVelocity(elapsed);
+			Vivium::Vector2<float> v1 = Cohesion(boid);
+			Vivium::Vector2<float> v2 = Separation(boid);
+			Vivium::Vector2<float> v3 = Alignment(boid);
+
+			boid.vel += v1 + v2 + v3;
+			boid.vel = Vivium::Vector2<float>::Normalise(boid.vel) * boid.speed;
+			boid.UpdateAngle();
+			boid.UpdatePosition(elapsed);
 			boid.WrapPosition(screen_dim);
 
 			float* vertex_data = new float[3];
@@ -103,5 +126,65 @@ public:
 			tex->Bind(0);
 			Vivium::Renderer::Submit(res.vertex_buffer.get(), res.index_buffer.get(), shader.get(), tex.get(), 0);
 		}
+	}
+
+	Vivium::Vector2<float> Cohesion(const Boid& my_boid) {
+		static const float weight = 0.005f;
+
+		Vivium::Vector2<float> perceived_center {0.0f};
+
+		int boids_evaluted = 0;
+
+		for (Boid& boid : boids) {
+			if (boid != my_boid) {
+				if (Vivium::Vector2<float>::Distance(boid.center, my_boid.center) < Boid::range) {
+					++boids_evaluted;
+					perceived_center += boid.center;
+				}
+			}
+		}
+
+		perceived_center /= boids_evaluted;
+
+		// Calculate vector of boid to center, multiply by weight
+		return (perceived_center - my_boid.center) * weight;
+	}
+
+	Vivium::Vector2<float> Separation(const Boid& my_boid) {
+		static const float separation = 30.0f;
+		static const float weight = 0.2f;
+
+		Vivium::Vector2<float> center { 0.0f };
+
+		for (Boid& boid : boids) {
+			if (boid != my_boid) {
+				// No need to check range, if they're close enough for the magnitude check, they're in range
+				if (Vivium::Vector2<float>::Magnitude(boid.center - my_boid.center) < separation) {
+					center -= (boid.center - my_boid.center);
+				}
+			}
+		}
+
+		return center * weight;
+	}
+
+	Vivium::Vector2<float> Alignment(const Boid& my_boid) {
+		static const float weight = 0.125f;
+
+		Vivium::Vector2<float> perceived_velocity {0.0f};
+		int boids_evaluted = 0;
+
+		for (Boid& boid : boids) {
+			if (boid != my_boid) {
+				if (Vivium::Vector2<float>::Distance(boid.center, my_boid.center) < Boid::range) {
+					++boids_evaluted;
+					perceived_velocity += boid.vel;
+				}
+			}
+		}
+
+		perceived_velocity /= boids_evaluted;
+
+		return (perceived_velocity - my_boid.vel) * weight;
 	}
 };

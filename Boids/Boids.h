@@ -3,6 +3,10 @@
 #define VIVIUM_EXPOSE_CORE
 #include "../Engine/src/Vivium.h"
 
+// TODO: can really speed up rule calculation
+// TODO: take into account wrapping of position into distance calculations
+// TODO: naming conventions
+
 struct Boid {
 	static uint16_t identifier_counter;
 
